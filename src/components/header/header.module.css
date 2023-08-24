@@ -1,0 +1,22 @@
+.header {
+    background-color: gray;
+    padding: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+.linkLogo {
+color: black;
+font-weight: 800;
+text-decoration: none;
+font-size: 30px;
+transition: 2s;
+text-align: center;
+}
+
+.linkLogo:hover {
+color: aqua;
+}

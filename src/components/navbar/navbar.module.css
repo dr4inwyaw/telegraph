@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: gray;
+}
+
+.links {
+    text-decoration: none;
+    font-size: large;
+    color: black;
+    padding: 5px;
+    font-weight: 700;
+    transition: 1s;
+}
+
+.links:hover {
+    color: aqua;
+}

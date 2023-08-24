@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.wrap {
+    max-width:1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 10fr;
+    grid-template-areas:'h h' 'nav con' ;
+}
+
+.contant {
+    grid-area: con;
+}
+
+.navbar {
+    grid-area: nav;
+}
+
+.header {
+    grid-area: h;
+}

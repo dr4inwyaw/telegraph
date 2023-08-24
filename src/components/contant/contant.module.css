@@ -1,0 +1,57 @@
+.contant {
+    background-color: gray;
+    padding: 20px;
+}
+
+.user {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+
+.avatarMain {
+    width: 130px;
+    border-radius: 300px;
+}
+
+
+.user input {
+    margin-left: 25px;
+    padding: 25px;
+    outline: none;
+    border-radius: 10px;
+    width: 350px;
+}
+
+.user button {
+    padding: 25px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    margin-left: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.user button:hover {
+    background-color: aqua;
+}
+
+.post { 
+    margin-top: 15px;
+}
+
+.post p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.avdiv {
+    display: flex;
+}
+
+.avdiv h3{
+    margin-left: 10px;
+}
