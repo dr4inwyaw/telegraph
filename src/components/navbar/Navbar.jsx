@@ -1,11 +1,12 @@
+import { NavLink } from 'react-router-dom';
 import style from './navbar.module.css'
-
+import React from "react";
 function Navbar() {
   return (
     <div className={`${style.navbar} navbar`}>
-        <a href="#" className={style.links} >Profile</a>
-        <a href="#" className={style.links} >Messenge</a>
-        <a href="#" className={style.links} >Users</a>
+        <NavLink to='/contant' className={style.links} >Profile</NavLink>
+        <NavLink to='/dialogs' className={style.links} >Messenge</NavLink>
+        <NavLink to='' className={style.links} >Users</NavLink>
     </div>
   );
 }
