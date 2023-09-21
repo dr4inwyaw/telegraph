@@ -6,7 +6,6 @@ function Navbar() {
     <div className={`${style.navbar} navbar`}>
         <NavLink to='/contant' className={style.links} >Profile</NavLink>
         <NavLink to='/dialogs' className={style.links} >Messenge</NavLink>
-        <NavLink to='' className={style.links} >Users</NavLink>
     </div>
   );
 }
