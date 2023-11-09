@@ -2,7 +2,7 @@ import style from './contant.module.css'
 import avatar from '../../img/7307566.jpg'
 import Posts from '../posts/Posts.jsx';
 
-function Contant() {
+function Contant({data}) {
   return (
     <div className={`${style.contant} contant`}>
       <div className={style.user}>
@@ -11,7 +11,7 @@ function Contant() {
         <h2>dr4inwyaw</h2>
         </div>
       </div>
-      <Posts/>
+      <Posts data={data}/>
     </div>
   );
 }
