@@ -11,7 +11,7 @@
     margin-right: auto;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 3fr 9fr;
     grid-template-areas:'h h' 'nav con' ;
 }
 
