@@ -5,15 +5,27 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import state from './data/state';
 import {addPost} from './data/state';
+import {addMeseng} from './data/state';
 
 
+let render3 = () => {
+    ReactDOM.render(
+        <React.StrictMode>
+        <App state={state} addPost={addPost} addMeseng={addMeseng}/>
+        </React.StrictMode>,
+        document.getElementById('root') 
+    )
+  //  const root = ReactDOM.createRoot(document.getElementById('root'));
+  //  root.render(
+//); 
+}
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <App state={state} addPost={addPost}/>
-);
+render3()
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+export default render3;

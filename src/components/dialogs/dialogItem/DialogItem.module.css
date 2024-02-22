@@ -1,0 +1,21 @@
+.dialogmes {
+display: flex;
+align-items: center;
+}
+
+.dialogName {
+    width: 200px;
+    margin-right: 15px;
+    border-right: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.TextDes {
+    padding: 10px;
+    background-color: gray;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    line-height: 14px;
+    font-weight: 600;
+}

@@ -1,11 +1,12 @@
 .dialogs {
-    display: flex
+    display: flex;
+    flex-direction: column;
 }
 
 .dialog {
     display: flex;
+    justify-content:space-between;
     flex-direction: column;
-    justify-content:space-between
 }
 
 .dialog a {
@@ -42,11 +43,13 @@
     font-size: 15px;
     transition: 1s;
     cursor: pointer;
+    width: 100px;
 }
 
 .send input {
     padding: 10px;
-
+    width: 300px;
+    margin-top: 15px;
 }
 
 .send button:hover {

@@ -1,10 +1,12 @@
+import style from "./DialogItem.module.css"
 import { NavLink } from 'react-router-dom';
-function DialogItem({name,id}) {
+function DialogItem({name,id,textMes}) {
     return (
-        <div>
-            <NavLink to={`/dialogs/${id}`}>
+        <div className={style.dialogmes}>
+            <NavLink className={style.dialogName} to={`/dialogs/${id}`}>
                 {name}
             </NavLink>
+            <p className={style.TextDes}>{textMes}</p>
         </div>
     )
 }

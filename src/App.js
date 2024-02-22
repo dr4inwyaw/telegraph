@@ -5,7 +5,7 @@ import Contant from './components/contant/Contant.jsx';
 import Dialog from './components/dialogs/Dialog.jsx';
 import Friends from './components/friends/Friends.jsx';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
-function App({state, addPost}) {
+function App({state, addPost, addMeseng}) {
   return (
     <div className="wrap">
       <BrowserRouter>
@@ -14,7 +14,7 @@ function App({state, addPost}) {
       <Switch> 
         <Route exact path='/' render={()=> <Contant data={state.post.postsName} addPost={addPost}/>}/>
         <Route exact path='/contant' render={()=> <Contant data={state.post.postsName} addPost={addPost}/>}/>
-        <Route exact path='/dialogs' render={()=> <Dialog data2={state.dialog.dialogName} data3={state.dialog.dialogMes}/>}/>
+        <Route exact path='/dialogs' render={()=> <Dialog data2={state.dialog.dialogName} data3={state.dialog.dialogMes} addMeseng2={addMeseng}/>}/>
         <Route exact path='/friends' render={()=> <Friends />}/>
       </Switch>
       </BrowserRouter>

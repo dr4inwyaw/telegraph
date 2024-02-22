@@ -1,10 +1,11 @@
 import avatar1 from './../img/7300000.jpg'
+import render3 from '../index.js'
 
 let state = { 
     dialog: {
-        dialogName: [{name:"Илон Маск", id: "0" },
-        {name:"Иванов Иван", id: "1" },
-        {name: "Максимов Максим", id: "2" },],
+        dialogName: [{name:"Илон Маск", id: "0", text:"как дела?"},
+        {name:"Иванов Иван", id: "1", text:"чем занимаешься?"},
+        {name: "Максимов Максим", id: "2", text:"как настроение?"},],
         dialogMes: [{text:"как дела?"},
         {text:"чем занимаешься?"},
         {text:"как настроение?"} ]
@@ -28,6 +29,15 @@ export let addPost = (postText) => {
     }
     state.post.postsName.push(newPost)
     console.log(state)
+}
+
+export let addMeseng = (MesengeText) => {
+    let newMes = {
+        text: MesengeText
+    }
+    state.dialog.dialogMes.push(newMes)
+    console.log(state)
+    render3() 
 }
 
 export default state;
