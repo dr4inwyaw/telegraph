@@ -3,14 +3,16 @@ import style from './posts.module.css'
 import Post from './post/Post';
 
 let postText = React.createRef()
+let postName = React.createRef()
 
 function Posts({data,addPost2}) {
     let addPost = () => {
-        addPost2(postText.current.value)
+        addPost2(postText.current.value,postName.current.value)
     }
     return (
         <div>
              <div className={style.add}>.
+                <input ref={postName} placeholder='Введите ваше имя' type='text'></input>
                 <input ref={postText} placeholder="Поделитесть вашей новостью" type='text' />
                  <button onClick={addPost}>Добавить</button>
              </div>

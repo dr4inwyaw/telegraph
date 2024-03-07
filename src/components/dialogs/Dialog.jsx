@@ -4,19 +4,20 @@ import React from "react";
 import style from "./dialog.module.css"
 
 let addMesn = React.createRef()
+let selectDialog = React.createRef()
 
 function Dialog({data2,addMeseng2}) {
     let addMeseng = () => {
-        addMeseng2(addMesn.current.value)
+        addMeseng2(addMesn.current.value,selectDialog.current.value)
     }
     return (
         <div className={style.dialogs}>
             <div className={style.dialog}>
-            {/* <DialogItem name={dialogName[0].name} id={dialogName[0].id}/> ||| <DialogItem name={dialogName[1].name} id={dialogName[1].id} /> ||| <DialogItem name={dialogName[2].name} id={dialogName[2].id} /> */}
             {data2.map(i => <DialogItem key={i.id} name={i.name} id={i.id} textMes={i.text}/>)}
             </div>
             <div className={style.send}>
-            <input ref={addMesn} type="text"/>
+            <input ref={selectDialog} placeholder='Введите имя получателя' type="text"></input>
+            <input ref={addMesn} placeholder='Введите сообщение' type="text"/>
             <button onClick={addMeseng}>отправить</button>
             
             </div>

@@ -1,5 +1,5 @@
 import avatar1 from './../img/7300000.jpg'
-import render3 from '../index.js'
+import {render3} from '../render'
 
 let state = { 
     dialog: {
@@ -23,21 +23,22 @@ let state = {
     }
 }
 
-export let addPost = (postText) => {
+export let addPost = (postText, postName) => {
     let newPost = {
-        text: postText, id: 4, likes: 1 
+        text: postText, id: 4, name: postName, img: avatar1, like:'3'
     }
     state.post.postsName.push(newPost)
     console.log(state)
+    render3(state) 
 }
 
-export let addMeseng = (MesengeText) => {
+export let addMeseng = (MesengeText,selectDialog) => {
     let newMes = {
-        text: MesengeText
+        text: MesengeText, name: selectDialog,
     }
-    state.dialog.dialogMes.push(newMes)
+    state.dialog.dialogName.push(newMes)
     console.log(state)
-    render3() 
+    render3(state) 
 }
 
 export default state;
