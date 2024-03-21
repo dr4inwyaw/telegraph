@@ -1,5 +1,13 @@
 import avatar1 from './../img/7300000.jpg'
-import {render3} from '../render'
+// import {render3} from '../render'
+
+function render3() {
+    console.log('hello')
+}
+
+export function subscribe(observer){
+render3 = observer
+}
 
 let state = { 
     dialog: {
@@ -47,4 +55,5 @@ export let addMeseng = (MesengeText,selectDialog) => {
     render3(state) 
 }
 
+window.state=state
 export default state;
