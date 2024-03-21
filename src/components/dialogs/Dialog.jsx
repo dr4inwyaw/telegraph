@@ -7,8 +7,11 @@ let addMesn = React.createRef()
 let selectDialog = React.createRef()
 
 function Dialog({data2,addMeseng2}) {
+    console.log(data2)
     let addMeseng = () => {
         addMeseng2(addMesn.current.value,selectDialog.current.value)
+        addMesn.current.value = ""
+        selectDialog.current.value = ""
     }
     return (
         <div className={style.dialogs}>

@@ -5,14 +5,23 @@ import Post from './post/Post';
 let postText = React.createRef()
 let postName = React.createRef()
 
-function Posts({data,addPost2}) {
+function Posts({data,addPost2,postChange}) {
+    console.log(data)
     let addPost = () => {
         addPost2(postText.current.value,postName.current.value)
+        postName.current.value = " "
+        postText.current.value = " "
     }
+    let side = "server"
+    let postChange1 = () => {
+        postChange(postName.current.value)
+        console.log(postName.current.value)
+    }
+
     return (
         <div>
-             <div className={style.add}>.
-                <input ref={postName} placeholder='Введите ваше имя' type='text'></input>
+             <div className={style.add}>
+                <input ref={postName} placeholder='Введите ваше имя' type='text' onChange={postChange1} ></input>
                 <input ref={postText} placeholder="Поделитесть вашей новостью" type='text' />
                  <button onClick={addPost}>Добавить</button>
              </div>
@@ -22,5 +31,6 @@ function Posts({data,addPost2}) {
         </div>
     );
 }; 
+
 
 export default Posts;
